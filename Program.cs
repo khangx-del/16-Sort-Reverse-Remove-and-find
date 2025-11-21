@@ -66,29 +66,13 @@ namespace _16_Sort_Reverse_Remove_and_find
             }
 
             Console.WriteLine();
-
-            int[] newarray = { 45, 12, 78, 89, 23 };
-
-            int searcha = 34;
-            int positioni = Array.IndexOf(newarray, searcha);
-
-            for (int i = 0; i < newarray.Length; i++)
+            numbers = numbers.Where(n => n != 78).ToArray();
+            Console.WriteLine("\nRemove element 78 from array: ");
+            foreach (int numRemove in numbers)
             {
-                if (newarray[i] == positioni)
-                {
-                    positioni = i;
-                }
+            Console.WriteLine(numRemove);
             }
-
-            if (positioni > -1)
-            {
-                Console.WriteLine($"number {searcha} has been found at position {positioni + 1}");
-            }
-            else
-            {
-                Console.WriteLine($"number {searcha} doesn't exist");
-            }
-
+            
         }
     }
 }
